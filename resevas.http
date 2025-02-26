@@ -1,0 +1,26 @@
+GET http://localhost:3000/reserva
+
+###
+
+GET http://localhost:3000/reserva/1
+
+###
+
+POST http://localhost:3000/reserva HTTP/1.1
+Content-Type: application/json
+
+{
+    "estado": "libre"
+}
+
+###
+PUT http://localhost:3000/reserva/2 HTTP/1.1
+Content-Type: application/json
+
+{
+    "estado": "ocupado"
+}
+###
+DELETE http://localhost:3000/reserva/3 HTTP/1.1
+
+

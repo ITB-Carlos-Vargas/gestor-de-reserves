@@ -1,0 +1,19 @@
+{
+    "recurso": [
+        {
+            "id_recurso": 1,
+            "tipo": "sala",
+            "estado": "reservado"
+        },
+        {
+            "id_recurso": 2,
+            "tipo": "vehiculo",
+            "estado": "libre"
+        },
+        {
+            "id_recurso": 3,
+            "tipo": "Equipamiento",
+            "estado": "libre"
+        }
+    ]
+}

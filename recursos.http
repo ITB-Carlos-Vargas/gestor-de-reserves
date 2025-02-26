@@ -1,4 +1,4 @@
-GET http://localhost:3000/recursos
+GET http://localhost:3000/recurso
 
 ###
 

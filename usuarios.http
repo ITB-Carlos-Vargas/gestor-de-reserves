@@ -23,6 +23,6 @@ Content-Type: application/json
   "rol": "admin"
 }
 ###
-DELETE http://localhost:3000/usuario/3 HTTP/1.1
+DELETE http://localhost:3000/usuario/4 HTTP/1.1
 
 

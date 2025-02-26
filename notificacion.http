@@ -1,0 +1,30 @@
+GET http://localhost:3000/notificacion
+
+###
+
+GET http://localhost:3000/notificacion/1
+
+###
+
+POST http://localhost:3000/notificacion HTTP/1.1
+Content-Type: application/json
+
+{
+    "id_reserva": 1,
+    "id_usuario": 1,
+    "accion": "reserva",
+    "notificacion": "Su reserva ha sido completada"
+}
+
+###
+PUT http://localhost:3000/notificacion/2 HTTP/1.1
+Content-Type: application/json
+
+{
+    "accion": "cancelar",
+    "notificacion": "Su reserva ha sido cancelada con exito"
+}
+###
+DELETE http://localhost:3000/notificacion/4 HTTP/1.1
+
+

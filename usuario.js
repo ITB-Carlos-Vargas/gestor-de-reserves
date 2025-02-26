@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 
 const readData = () => {
    try {
-       const data = fs.readFileSync("./usuario.json");
+       const data = fs.readFileSync("./jasons/usuario.json");
        return JSON.parse(data);
    } catch (error) {
        console.error(error);
@@ -19,7 +19,7 @@ const readData = () => {
 
 const writeData = (data) => {
    try {
-       fs.writeFileSync("./reserva.json", JSON.stringify(data));
+       fs.writeFileSync("./jasons/usuario.json", JSON.stringify(data));
    } catch (error) {
        console.error(error);
    }
@@ -77,6 +77,16 @@ app.put("/usuario/:id_usuario", (req, res) => {
 //funcion para escuchar
 app.listen(3000,()=>{
 console.log("Server listing on port 3000")
+});
+//funcion para eliminar
+app.delete("/usuario/:id_usuario", (req, res) => {
+   const data = readData();
+   const id_usuario = parseInt(req.params.id_usuario);
+   // Filtramos para mantener solo los que NO coincidan con el id dado
+   const newData = data.usuario.filter(usuario => usuario.id_usuario !== id_usuario);
+   // Guardamos los cambios en el JSON
+   writeData({ usuario: newData });
+   res.json({ message: "Notificación eliminada correctamente" });
 });
 
 /*

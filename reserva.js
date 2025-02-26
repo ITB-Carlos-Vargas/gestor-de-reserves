@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 
 const readData = () => {
    try {
-       const data = fs.readFileSync("./reserva.json");
+       const data = fs.readFileSync("./jasons/reserva.json");
        return JSON.parse(data);
    } catch (error) {
        console.error(error);
@@ -19,7 +19,7 @@ const readData = () => {
 
 const writeData = (data) => {
    try {
-       fs.writeFileSync("./reserva.json", JSON.stringify(data));
+       fs.writeFileSync("./jasons/reserva.json", JSON.stringify(data));
    } catch (error) {
        console.error(error);
    }
@@ -77,6 +77,16 @@ app.put("/reserva/:id_reserva", (req, res) => {
 //funcion para escuchar
 app.listen(3000,()=>{
 console.log("Server listing on port 3000")
+});
+//funcion para eliminar
+app.delete("/reserva/:id_reserva", (req, res) => {
+   const data = readData();
+   const id_reserva = parseInt(req.params.id_reserva);
+   // Filtramos para mantener solo los que NO coincidan con el id dado
+   const newData = data.reserva.filter(reserva => reserva.id_reserva !== id_reserva);
+   // Guardamos los cambios en el JSON
+   writeData({ reserva: newData });
+   res.json({ message: "Reserva eliminada correctamente" });
 });
 
 /*

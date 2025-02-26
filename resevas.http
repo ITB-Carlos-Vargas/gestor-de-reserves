@@ -2,7 +2,7 @@ GET http://localhost:3000/reserva
 
 ###
 
-GET http://localhost:3000/reserva/1
+GET http://localhost:3000/reserva/2
 
 ###
 

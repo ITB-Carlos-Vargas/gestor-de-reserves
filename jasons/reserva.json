@@ -2,10 +2,14 @@
     "reserva": [
         {
             "id_reserva": 1,
+            "id_recurso": 1,
+            "id_usuario": 1,
             "estado": "ocupado"
         },
         {
             "id_reserva": 2,
+            "id_usuario": 2,
+            "id_recurso": 2,
             "estado": "ocupado"
         }
     ]

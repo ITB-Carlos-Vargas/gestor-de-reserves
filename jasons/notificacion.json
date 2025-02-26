@@ -1,1 +1,25 @@
-{"notificacion":[{"id_reserva":1,"id_usuario":1,"id_notificacion":1,"accion":"reserva","notificacion":"Su reserva ha sido completada"},{"id_notificacion":2,"id_reserva":1,"id_usuario":1,"accion":"cancelar","notificacion":"Su reserva ha sido cancelada con exito"},{"id_notificacion":3,"id_reserva":1,"id_usuario":1,"accion":"reserva","notificacion":"Su reserva ha sido completada"}]}
+{
+    "notificacion": [
+        {
+            "id_reserva": 1,
+            "id_usuario": 1,
+            "id_notificacion": 1,
+            "accion": "reserva",
+            "notificacion": "Su reserva ha sido completada"
+        },
+        {
+            "id_notificacion": 2,
+            "id_reserva": 1,
+            "id_usuario": 1,
+            "accion": "cancelar",
+            "notificacion": "Su reserva ha sido cancelada con exito"
+        },
+        {
+            "id_notificacion": 3,
+            "id_reserva": 1,
+            "id_usuario": 1,
+            "accion": "reserva",
+            "notificacion": "Su reserva ha sido completada"
+        }
+    ]
+}

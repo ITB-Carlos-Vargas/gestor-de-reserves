@@ -45,15 +45,10 @@ app.get("/usuario/:id_usuario",(req,res)=>{
    res.json(usuario);
 });
 //Creem un endpoint del tipus post per afegir un llibre
-
-
 app.post("/usuario",(req,res)=>{
    const data=readData();
    const body=req.body;
-   //todo lo que viene en ...body se agrega al nuevo libro
-   const newusuario={
-   id_usuario:data.usuario.length+1,
-   ...body, //operacion de propagacion
+   const newusuario={ id_usuario:data.usuario.length+1,...body, //operacion de propagacion
    };
    data.usuario.push(newusuario);
    writeData(data);

@@ -1,1 +1,47 @@
-{"usuario":[{"id_usuario":1,"correo_electronico":"xxxMasterGame999@gmail.com","rol":"Cliente"},{"id_usuario":2,"correo_electronico":"superSaitan@gmail.com","rol":"cliente"},{"id_usuario":3,"correo_electronico":"prueba@gmail.com","rol":"admin"}]}
+{
+    "usuario": [
+        {
+            "id_usuario": 1,
+            "correo_electronico": "xxxMasterGame999@gmail.com",
+            "rol": "Cliente"
+        },
+        {
+            "id_usuario": 2,
+            "correo_electronico": "superSaitan@gmail.com",
+            "rol": "cliente"
+        },
+        {
+            "id_usuario": 3,
+            "correo_electronico": "prueba@gmail.com",
+            "rol": "admin"
+        },
+        {
+            "id_usuario": 4,
+            "correo_electronico": "nose@gmail.com",
+            "rol": "cliente"
+        }
+    ]
+}
+    "usuario": [
+        {
+            "id_usuario": 1,
+            "correo_electronico": "xxxMasterGame999@gmail.com",
+            "rol": "Cliente"
+        },
+        {
+            "id_usuario": 2,
+            "correo_electronico": "superSaitan@gmail.com",
+            "rol": "cliente"
+        },
+        {
+            "id_usuario": 3,
+            "correo_electronico": "prueba@gmail.com",
+            "rol": "admin"
+        },
+        {
+            "id_usuario": 4,
+            "correo_electronico": "nose@gmail.com",
+            "rol": "cliente"
+        }
+    ]
+}

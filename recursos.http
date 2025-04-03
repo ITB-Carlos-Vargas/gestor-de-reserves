@@ -2,11 +2,11 @@ GET http://localhost:3000/recurso
 
 ###
 
-GET http://localhost:3000/recursos/1
+GET http://localhost:3000/recurso/1
 
 ###
 
-POST http://localhost:3000/recursos HTTP/1.1
+POST http://localhost:3000/recurso HTTP/1.1
 Content-Type: application/json
 
 {

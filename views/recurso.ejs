@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Recursos</title>
+    <link rel="stylesheet" href="../styles.css" type="text/css">
+</head>
+<body>
+    <header>
+        <h1>Gestión de recursos para <%= user.name %>!</h1>
+        <h2><%- htmlMessage %></h2>
+    </header>
+    
+    <main>
+        <section>
+            <h2>Lista de recursos</h2>
+            <table class="resource-table">
+                <thead>
+                    <tr>
+                        <th>Tipo</th>
+                        <th>Precio</th>
+                        <th>Estado</th>
+                        <th>Detalles</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% data.recurso.forEach(recurso => { %>
+                        <tr>
+                            <td><%= recurso.tipo %></td>
+                            <td>$<%= recurso.precio %></td>
+                            <td class="estado <%= recurso.estado.toLowerCase() %>"><%= recurso.estado %></td>
+                            <td><a href="recursos/<%= recurso.id_recurso %>" class="btn-detalles">Ver Detalles</a></td>
+                        </tr>
+                    <% }) %>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+</html>

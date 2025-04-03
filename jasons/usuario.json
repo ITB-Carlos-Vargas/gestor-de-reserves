@@ -3,45 +3,38 @@
         {
             "id_usuario": 1,
             "correo_electronico": "xxxMasterGame999@gmail.com",
-            "rol": "Cliente"
+            "rol": "Cliente",
+            "nombre": "Carlos",
+            "apellido": "González",
+            "telefono": "+34 654 789 123",
+            "cumpleaños": "1995-07-15"
         },
         {
             "id_usuario": 2,
             "correo_electronico": "superSaitan@gmail.com",
-            "rol": "cliente"
+            "rol": "cliente",
+            "nombre": "Ana",
+            "apellido": "Martínez",
+            "telefono": "+34 612 345 678",
+            "cumpleaños": "1988-03-22"
         },
         {
             "id_usuario": 3,
             "correo_electronico": "prueba@gmail.com",
-            "rol": "admin"
+            "rol": "admin",
+            "nombre": "Javier",
+            "apellido": "Fernández",
+            "telefono": "+34 678 901 234",
+            "cumpleaños": "1990-11-05"
         },
         {
             "id_usuario": 4,
             "correo_electronico": "nose@gmail.com",
-            "rol": "cliente"
-        }
-    ]
-}
-    "usuario": [
-        {
-            "id_usuario": 1,
-            "correo_electronico": "xxxMasterGame999@gmail.com",
-            "rol": "Cliente"
-        },
-        {
-            "id_usuario": 2,
-            "correo_electronico": "superSaitan@gmail.com",
-            "rol": "cliente"
-        },
-        {
-            "id_usuario": 3,
-            "correo_electronico": "prueba@gmail.com",
-            "rol": "admin"
-        },
-        {
-            "id_usuario": 4,
-            "correo_electronico": "nose@gmail.com",
-            "rol": "cliente"
+            "rol": "cliente",
+            "nombre": "Lucía",
+            "apellido": "Rodríguez",
+            "telefono": "+34 698 765 432",
+            "cumpleaños": "2000-06-30"
         }
     ]
 }

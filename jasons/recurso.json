@@ -2,18 +2,30 @@
     "recurso": [
         {
             "id_recurso": 1,
+            "nombre": "Sala Ejecutiva",
             "tipo": "sala",
-            "estado": "reservado"
+            "estado": "reservado",
+            "descripcion": "Sala de conferencias equipada con proyector y sonido envolvente.",
+            "precio": 150.00,
+            "informacion_detallada": "Esta sala es ideal para reuniones de negocios y conferencias. Cuenta con capacidad para 50 personas, sistema de climatización y conexión Wi-Fi de alta velocidad. Se encuentra ubicada en el segundo piso del edificio central."
         },
         {
             "id_recurso": 2,
+            "nombre": "Sedán Ejecutivo",
             "tipo": "vehiculo",
-            "estado": "libre"
+            "estado": "libre",
+            "descripcion": "Automóvil sedán de última generación con aire acondicionado y GPS.",
+            "precio": 75.00,
+            "informacion_detallada": "Vehículo disponible para alquiler diario. Cuenta con un motor eficiente, espacio para cinco pasajeros y medidas de seguridad avanzadas. Se entrega con el tanque lleno y requiere devolución en las mismas condiciones."
         },
         {
             "id_recurso": 3,
+            "nombre": "Proyector HD",
             "tipo": "Equipamiento",
-            "estado": "libre"
+            "estado": "libre",
+            "descripcion": "Proyector de alta definición con múltiples opciones de conectividad.",
+            "precio": 50.00,
+            "informacion_detallada": "Este proyector es perfecto para presentaciones y eventos. Admite conexión HDMI, VGA y USB. Ofrece una resolución Full HD y una vida útil de lámpara de hasta 20,000 horas. Se incluye cableado y mando a distancia."
         }
     ]
 }

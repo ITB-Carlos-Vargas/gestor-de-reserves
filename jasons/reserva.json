@@ -11,6 +11,10 @@
             "id_usuario": 2,
             "id_recurso": 2,
             "estado": "ocupado"
+        },
+        {
+            "id_reserva": 3,
+            "estado": "libre"
         }
     ]
 }

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles del Recurso</title>
+    <link rel="stylesheet" href="../styles.css" type="text/css">
+</head>
+<body>
+
+    <header>
+        <h1>Detalles del Recurso</h1>
+    </header>
+
+    <main>
+        <section class="product-container">
+            
+            <div class="product-info">
+                <h2><%= recurso.nombre %></h2>
+                <p><strong>Tipo:</strong> <%= recurso.tipo %></p>
+                <p><strong>Estado:</strong> <%= recurso.estado %></p>
+                <p class="product-price">Precio: $<%= recurso.precio %></p>
+                <p><strong>Descripción:</strong> <%= recurso.descripcion %></p>
+                <p><strong>Información Detallada:</strong> <%= recurso.informacion_detallada %></p>
+                <a href="#" class="btn-reservar">Reservar Ahora</a>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

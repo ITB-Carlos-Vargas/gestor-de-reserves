@@ -24,9 +24,8 @@ const readNotificaciones = () => {
 
 //creamos un endpoint per obtenir todos los usuarios
 router.get("/",(req,res)=>{
-   const htmlMessage = `<a href="http://localhost:3000/">HOME</a>`;
    const data = readNotificaciones();
-   res.render("notificacion",{data, htmlMessage})
+   res.render("notificacion",{data})
 });
 
 

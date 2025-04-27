@@ -26,9 +26,9 @@ const readUsuarios = () => {
 router.get("/",(req,res)=>{
 
    const user={name:"Carlos"}
-   const htmlMessage = `<p>Aquest és un text <strong>amb estil</strong> i un enllaç:</p> <a href="http://localhost:3000/">Visita Example</a>`;
+
    const data = readUsuarios();
-   res.render("usuario",{user, data, htmlMessage})
+   res.render("usuario",{ data})
 });
 router.get("/:id_usuario",(req,res)=>{
    const data=readUsuarios();

@@ -57,50 +57,54 @@
     padding-bottom: 10px;
   }
   
-  /* Lista de productos */
-  ul.product-item {
-    list-style: none;
-  }
+/* Lista de productos: centrar los <li> dentro del UL */
+ul.product-item {
+  list-style: none;
   
+}
+
+ul.product-item li {
+  padding: 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  margin-bottom: 10px;
+ 
+  text-align: center; 
+
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+ul.product-item li:hover {
+  background-color: #f9f9f9;
+  transform: scale(1.01);
+}
+
+ul.product-item li strong {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+ul.product-item li span {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 3px;
+}
+
+
+/* Responsive */
+@media (min-width: 600px) {
   ul.product-item li {
-    padding: 15px;
-    border: 1px solid #e0e0e0;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    display: flex;
-    flex-direction: column;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
-  
-  ul.product-item li:hover {
-    background-color: #f9f9f9;
-    transform: scale(1.01);
-  }
-  
-  ul.product-item li strong {
-    font-size: 1.2rem;
-    color: #333;
-    margin-bottom: 5px;
-  }
-  
+
   ul.product-item li span {
-    font-size: 1rem;
-    color: #666;
-    margin-top: 3px;
+    margin: 0 10px;
   }
-  
-  /* Responsive */
-  @media (min-width: 600px) {
-    ul.product-item li {
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-    }
-  
-    ul.product-item li span {
-      margin: 0 10px;
-    }
-  }
+}
+
   /*######################################################################*/
   /* Contenedor del producto */
 .product-container {
@@ -234,4 +238,12 @@
   border: 1px solid #ccc;
   border-radius: 4px;
 }
-
+.white-link,
+.white-link:link,
+.white-link:visited,
+.white-link:hover,
+.white-link:focus,
+.white-link:active {
+  color: #fff;
+  text-decoration: none;
+}

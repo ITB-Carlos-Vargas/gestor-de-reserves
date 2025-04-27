@@ -24,9 +24,9 @@ const readRecursos = () => {
 
  router.get("/",(req,res)=>{
     const user={name:"Carlos"}
-    const htmlMessage = `<p>Aquest és un text <strong>amb estil</strong> i un enllaç:</p> <a href="http://localhost:3000/">Visita Example</a>`;
+    
     const data = readRecursos();
-    res.render("recurso",{user, data, htmlMessage})
+    res.render("recurso",{ data})
  });
 
  router.get("/:id_recurso",(req,res)=>{

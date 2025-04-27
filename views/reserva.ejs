@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Recursos</title>
+    <link rel="stylesheet" href="../styles.css" type="text/css">
+</head>
+<body>
+    <header>
+        <h1>Gestión de reservas</h1>
+        <h2><%- htmlMessage %></h2>
+    </header>
+    
+    <main>
+        <section>
+            <h2>Lista de reservas</h2>
+            <table class="resource-table">
+                <thead>
+                    <tr>
+                        <th>Nº de reserva</th>
+                        <th>Nº de recurso</th>
+                        <th>Nº de ususario</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% data.reserva.forEach(reserva => { %>
+                        <tr>
+                            <td><%= reserva.id_reserva %></td>
+                            <td><%= reserva.id_recurso %></td>
+                            <td ><%= reserva.id_usuario %></td>
+                            <td class="estado <%= reserva.estado.toLowerCase() %>"><%= reserva.estado %></td>
+                        </tr>
+                    <% }) %>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Recursos</title>
+    <link rel="stylesheet" href="../styles.css" type="text/css">
+</head>
+<body>
+    <header>
+        <h1>Gestión de notificaciones</h1>
+        <h2><%- htmlMessage %></h2>
+    </header>
+    
+    <main>
+        <section>
+            <h2>Lista de notificaciones</h2>
+            <table class="resource-table">
+                <thead>
+                    <tr>
+                        <th>Nº de notificacion</th>
+                        <th>Nº de reserva</th>
+                        <th>Nº de ususario</th>
+                        <th>Accion</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% data.notificacion.forEach(notificacion => { %>
+                        <tr>
+                            <td><%= notificacion.id_notificacion %></td>
+                            <td><%= notificacion.id_reserva %></td>
+                            <td><%= notificacion.id_usuario %></td>
+                            <td><%= notificacion.accion %></td>
+                        </tr>
+                    <% }) %>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+</html>

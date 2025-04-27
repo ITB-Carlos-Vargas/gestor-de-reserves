@@ -1,6 +1,8 @@
 import express from "express";
 import recursosRoute from './routes/recursos.js';
 import usuariosRoute from './routes/usuarios.js';
+import reservasRoute from './routes/reservas.js';
+import notificacionesRoute from './routes/notificaciones.js';
 import fs from "fs";
 import bodyParser from "body-parser";
 
@@ -13,6 +15,8 @@ app.set('views', './views'); //carpeta on desem els arxius .ejs
 
 app.use('/recursos', recursosRoute);
 app.use('/usuarios', usuariosRoute);
+app.use('/reservas', reservasRoute);
+app.use('/notificaciones', notificacionesRoute);
 
 app.listen(3000,()=>{
 console.log("Server listing on port 3000")

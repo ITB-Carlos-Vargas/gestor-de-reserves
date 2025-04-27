@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Editar Recurso</title>
+  <link rel="stylesheet" href="/styles.css"><!-- tu CSS -->
+</head>
+<body>
+
+  <header>
+    <h1>Editar Recurso</h1>
+  </header>
+
+  <main>
+    <section>
+      <form id="formEditar" class="resource-form">
+        <input type="hidden" id="id_recurso" value="<%= recurso.id_recurso %>">
+
+        <div class="form-group">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" value="<%= recurso.nombre %>">
+        </div>
+
+        <div class="form-group">
+          <label for="tipo">Tipo:</label>
+          <select id="tipo">
+            <option value="equipamiento" <%= recurso.tipo.toLowerCase()==='equipamiento' ? 'selected' : '' %>>Equipamiento</option>
+            <option value="vehiculo"      <%= recurso.tipo.toLowerCase()==='vehiculo' ? 'selected' : '' %>>Vehículo</option>
+            <option value="sala"          <%= recurso.tipo.toLowerCase()==='sala' ? 'selected' : '' %>>Sala</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="estado">Estado:</label>
+          <select id="estado">
+            <option value="libre"     <%= recurso.estado.toLowerCase()==='libre' ? 'selected' : '' %>>Libre</option>
+            <option value="reservado" <%= recurso.estado.toLowerCase()==='reservado' ? 'selected' : '' %>>Reservado</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="descripcion">Descripción breve:</label>
+          <textarea id="descripcion" rows="2"><%= recurso.descripcion %></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="precio">Precio:</label>
+          <input type="number" id="precio" step="0.01" value="<%= recurso.precio %>">
+        </div>
+
+        <div class="form-group">
+          <label for="informacion_detallada">Información Detallada:</label>
+          <textarea id="informacion_detallada" rows="4"><%= recurso.informacion_detallada %></textarea>
+        </div>
+
+        <button type="submit" class="btn-reservar">Guardar Cambios</button>
+      </form>
+    </section>
+  </main>
+
+  <script>
+    document.getElementById('formEditar').addEventListener('submit', async e => {
+      e.preventDefault();
+      const id_recurso = document.getElementById('id_recurso').value;
+      const datos = {
+        nombre: document.getElementById('nombre').value,
+        tipo: document.getElementById('tipo').value,
+        estado: document.getElementById('estado').value,
+        descripcion: document.getElementById('descripcion').value,
+        precio: parseFloat(document.getElementById('precio').value),
+        informacion_detallada: document.getElementById('informacion_detallada').value
+      };
+      const res = await fetch(`/recursos/${id_recurso}`, {
+        method: 'PUT',
+        headers: {'Content-Type':'application/json'},
+        body: JSON.stringify(datos)
+      });
+      if (res.ok) {
+        alert('Recurso actualizado correctamente');
+        window.location.href = '/recursos';
+      } else {
+        alert('Error al actualizar');
+      }
+    });
+  </script>
+
+</body>
+</html>

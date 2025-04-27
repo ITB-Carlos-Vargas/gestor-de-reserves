@@ -37,7 +37,16 @@ const readRecursos = () => {
     res.render("recursoDetails",{ recurso})
  });
  
- 
+ router.get("/editar/:id_recurso", (req, res) => {
+   const data = readRecursos();
+   const id_recurso = parseInt(req.params.id_recurso);
+   const recurso = data.recurso.find((recurso) => recurso.id_recurso === id_recurso);
+
+  
+
+   res.render("recursoEdit", { recurso});
+});
+
  
  router.post("/",(req,res)=>{
     const data=readRecursos();
